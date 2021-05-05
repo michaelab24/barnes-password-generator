@@ -44,9 +44,10 @@ function generatePassword() {
   }
 
 for (let index = 0; index < passwordlength; index++) {
-  const randomcharsetlength = Math.floor (Math.random() * charSet.length) 
-  const randomlength = Math.floor(Math.random () * charSet [randomcharsetlength].length)
-  randompassword += charSet [randomcharsetlength][randomlength]
+  const randomcharsetlength = Math.floor (Math.random() * charSet.length)
+  const randomcharacterset = charSet [randomcharsetlength] 
+  const randomlength = Math.floor(Math.random () * randomcharacterset.length)
+  randompassword += randomcharacterset[randomlength]
 }
 
 return randompassword
