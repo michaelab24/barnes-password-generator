@@ -5,7 +5,12 @@ var numbers = ["0", "1", "2", "3", "4", "5","6", "7", "8", "9"]
 var specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"]
 var charSet
 
-var askUser
+var askUser = prompt ("Your password must be between 8-128 characters. Please select the number of characters you'd like to use in your password.")
+var askUser = prompt ("Would you like to use upper case letters in your password?")
+var askUser = prompt ("Would you like to use lower case letters in your password?")
+var askUser = prompt ("Would you like to use numbers in your password?")
+var askUser = prompt ("Would you like to use special characters in your password?")
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
