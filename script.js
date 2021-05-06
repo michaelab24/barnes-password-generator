@@ -1,11 +1,11 @@
-// Assignment code here
+// Assignment code here, arrays created
 var uppercase = ["A", "B","C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var lowercase = ["a", "b","c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var numbers = ["0", "1", "2", "3", "4", "5","6", "7", "8", "9"]
 var specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+"]
 var charSet  = []
 
-// Get references to the #generate element
+// Get references to the #generate element, added prompts for users to select the characters for password
 var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   var passwordlength = prompt ("Your password must be between 8-128 characters. Please select the number of characters you'd like to use in your password.")
@@ -19,7 +19,7 @@ function generatePassword() {
   var choosespecial = confirm ("Would you like to use special characters in your password?")
   var randompassword = ""
 
-  //add arrays if the user has chosen that they want to use uppercase
+  //conditional statements for user selection between uppercase, lowercase, numbers, and special chars
   
   charSet = []
   if (chooseupper === true) {
@@ -42,6 +42,8 @@ function generatePassword() {
     alert ("Please choose at least one character set to create your password.")
     return ""
   }
+
+  // for statement using Math.floor and Math.random for random selection of characters
 
 for (let index = 0; index < passwordlength; index++) {
   const randomcharsetlength = Math.floor (Math.random() * charSet.length)
